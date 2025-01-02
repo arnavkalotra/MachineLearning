@@ -1,0 +1,30 @@
+Cal500 Research
+
+"Semantic Representation:
+We consider 135 musically-relevant concepts spanning six semantic categories: 
+29 instruments were annotated as present in the song or not; 
+22 vocal characteristics were annotated as relevant to the singer or not; 
+36 genres, a subset of the Codaich genre list, were annotated as relevant to the song or "-   potential instrument connection
+
+How Participants rate the music based on a word describing it 
+
+"We expand the set of 135 survey concepts to a set of 237 `words' by mapping all bipolar 
+concepts to two individual words. For example, the five degrees of the concept `Energy 
+Level' were mapped to `Low Energy' and `High Energy'. The resulting collection of 
+human annotations uses a vector of numbers to express the response of a human 
+listener to a semantic keyword.  For each word, the annotation vector takes the value +1 
+or -1 if the human annotator considers the song is or is not indicative of the word, or 0 if 
+unsure.  We take all the human annotations for each song and combine them to a single 
+annotation vector for that song by observing the level of agreement over all annotators. 
+The final semantic weights for a song/word pair are:
+
+	weight(song, word) = max ( 0, #positive votes - #negative votes / #annotations)
+
+For example, for a given song and word, if four listeners labeled the song with +1, +1, 0, 
+-1, then the weight is 1/4.
+This data is stored as a comma-separated, MATLAB readable (function 'dlmread') ASCII 
+file 'softAnnotations.txt'"
+
+
+
+Additonally added binary vectors 
